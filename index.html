@@ -50,14 +50,68 @@
       href="public/assets/icons/favicon/favicon.svg"
       type="image/svg+xml"
     />
-    
-    <link rel="stylesheet" href="public/assets/css/general.css">
-    <link rel="stylesheet" href="public/assets/css/loginForm.css">
+
+    <link rel="stylesheet" href="public/assets/css/general.css" />
+    <link rel="stylesheet" href="public/assets/css/loginForm.css" />
     <script src="js/app.js" defer></script>
     <script src="js/storage.js" defer></script>
     <script src="js/student.js" defer></script>
     <script src="js/ui.js" defer></script>
     <title>Student Management System</title>
   </head>
-  <body></body>
+  <body>
+    <!-- LOGIN -->
+    <section id="login-section">
+      <h2>Log In</h2>
+      <form id="login-form" action="" method="" novalidate>
+        <div class="form-group">
+          <label for="login-email">Email</label>
+          <input
+            type="email"
+            id="login-email"
+            name="login-email"
+            autocomplete="email"
+            placeholder="juandelacruz@gmail.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="login-password"
+              name="login-password"
+              autocomplete="current-password"
+              minlength="8"
+              placeholder="********"
+              required
+            />
+            <button
+              type="button"
+              class="toggle-password"
+              data-target="login-password"
+              aria-label="Show password"
+              aria-pressed="false"
+            >
+              Show
+            </button>
+          </div>
+        </div>
+
+        <div class="form-group form-checkbox">
+          <input type="checkbox" id="login-remember" name="login-remember" />
+          <label for="login-remember">Remember me</label>
+        </div>
+
+        <button type="submit">Log In</button>
+
+        <p class="form-links">
+          <a href="">Forgot password?</a>
+          <a href="">Create an account</a>
+        </p>
+      </form>
+    </section>
+  </body>
 </html>
